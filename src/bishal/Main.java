@@ -1,21 +1,30 @@
 package bishal;
 
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String args[]) {
-//        LinkedList2 list = new LinkedList2();
-//        list.addLast(3);
-//        list.addLast(5);
-//        list.addFirst(10);
-//        System.out.println(list.indexOf(5));
-//        System.out.println(list.indexOf(3));
-//        System.out.println(list.indexOf(10));
-//        System.out.println(list.indexOf(11));
-   DoublyLinkedList list = new DoublyLinkedList();
-   list.addLast(2);
+        LinkedList2 list = new LinkedList2();
         list.addLast(3);
-        list.addLast(4);
         list.addLast(5);
-        System.out.println(list.toString());
+        list.addLast(10);
+        list.addLast(13);
+        list.addLast(14);
+        System.out.println(list.findNodeFromLast(3));
+//        list.reverse();
+//        var array = list.toArray();
+//       System.out.println(Arrays.toString(array));
+//        LinkedList list = new LinkedList();
+//        list.addLast(4);
+//        list.addLast(5);
+//        list.addLast(6);
+//        list.addLast(7);
+//        list.addLast(8);
+//        list.reverse();
+//        var array = list.toArray();
+//        System.out.println(Arrays.toString(array));
+//
+
     }
 }
