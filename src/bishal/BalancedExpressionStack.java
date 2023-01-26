@@ -1,7 +1,13 @@
 package bishal;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 public class BalancedExpressionStack {
+
+    private final List<Character> leftBrackets = Arrays.asList('(','<','{','[');
+    private final List<Character> rightBrackets = Arrays.asList(')','>','}',']');
+
     //)1+2) --false
     // (1+2*3) --true
     // (1+2*3>) --false
@@ -20,16 +26,17 @@ public class BalancedExpressionStack {
         return stack.empty();
     }
     private boolean isLeftBracket(char ch){
-        return ch  == '(' || ch=='[' || ch=='<' || ch=='{';
+        return leftBrackets.contains(ch);
     }
     private boolean isRightBracket(char ch){
-        return ch == ')' || ch==']' || ch=='>' || ch=='}';
+         return rightBrackets.contains(ch);
     }
     private boolean bracketsMatch(char left,char right){
-        return  (right == ')' && left != '(') ||
-                (right == '[' && left != ']') ||
-                (right == '{' && left != '}') ||
-                (right == '<' && left != '>') ;
+        return leftBrackets.indexOf(left) == rightBrackets.indexOf(right);
+//        return  (right == ')' && left != '(') ||
+//                (right == '[' && left != ']') ||
+//                (right == '{' && left != '}') ||
+//                (right == '<' && left != '>') ;
 
     }
 
