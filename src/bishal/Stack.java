@@ -29,7 +29,7 @@ public class Stack {
        return stack[count-1];
     }
     public boolean isEmpty(){
-       return count == 0;
+       return count ==  0;
     }
 
 
