@@ -53,6 +53,13 @@ public class BinaryTree {
         }
         return false;
     }
+    public int min(){
+        return min(root);
+    }
+    private int min(Node node){
+        if(node.left == null) return node.value;
+        return min(node.left);
+    }
 
 
 

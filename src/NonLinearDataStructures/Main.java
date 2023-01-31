@@ -2,25 +2,26 @@ package NonLinearDataStructures;
 
 public class Main {
      public static void main(String args[]){
-          Tree tree = new Tree();
-          tree.addChild(4);
-          tree.addChild(1);
-          tree.addChild(5);
-          tree.addChild(8);
-          tree.addChild(3);
-          System.out.println(tree.lookup(4));
-          System.out.println(tree.lookup(5));
-          System.out.println(tree.lookup(10));
+         AVLTree tree = new AVLTree();
+         tree.insert(10);
+         tree.insert(20);
 
-//          System.out.println("Done");
 
-//          BinaryTree tree = new BinaryTree();
-//          tree.addNode(4);
-//          tree.addNode(1);
-//          tree.addNode(5);
-//          tree.addNode(8);
-//          tree.addNode(3);
-//          System.out.println("Done");
+        // tree.insert(11);
+
      }
+     public static int factroial(int num){
+          int fact = 1;
+          for(int i=num;i>1;i--){
+               fact = fact*i;
+          }
+          return fact;
+     }
+     public static int recursiveFactorial(int num){
+          //base condition
+          if(num ==1) return 1;
+          return num * recursiveFactorial(num-1);
+     }
+
 
 }
